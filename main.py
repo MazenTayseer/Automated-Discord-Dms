@@ -33,7 +33,7 @@ def send_messages(driver, storedMessage):
                 (By.XPATH, "//div[@class='listItemContents-2n2Uy9']"))
         )
         current_friend[index].click()
-        time.sleep(1)
+        time.sleep(1.5)
 
         message_friend = WebDriverWait(driver, 60).until(
             EC.presence_of_element_located(
@@ -50,7 +50,7 @@ def send_messages(driver, storedMessage):
 
         index += 1
         driver.back()
-        time.sleep(1)
+        time.sleep(1.5)
 
         list_of_friends = driver.find_elements(
             By.XPATH, "//div[@class='listItemContents-2n2Uy9']")
@@ -69,10 +69,11 @@ def log_in(driver, storedEmail, storedPassword):
     password.send_keys(Keys.ENTER)
 
     time.sleep(5)
-    if driver.current_url != "https://discord.com/login":
+    if driver.current_url == "https://discord.com/channels/@me" or driver.current_url == "https://discord.com/app":
         print(bcolors.OKGREEN + "[*] - LOGGED IN")
     else:
         print(bcolors.FAIL + "[!] - FAILED TO LOG IN, WRONG CREDENTIALS OR RECAPTCHA APPEARED")
+        driver.quit()
         exit(1)
 
     friends_all = WebDriverWait(driver, 240).until(
