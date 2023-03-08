@@ -2,6 +2,7 @@ import os
 import pyfiglet
 import time
 import customtkinter
+import random
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -33,14 +34,14 @@ def send_messages(driver, storedMessage):
                 (By.XPATH, "//div[@class='listItemContents-2n2Uy9']"))
         )
         current_friend[index].click()
-        time.sleep(1.5)
+        time.sleep(random.randint(1, 2))
 
         message_friend = WebDriverWait(driver, 60).until(
             EC.presence_of_element_located(
                 (By.XPATH, "//div[@role='textbox']"))
         )
         message_friend.send_keys(storedMessage)
-        time.sleep(1)
+        time.sleep(random.randint(1, 2))
         message_check = message_friend.text
 
         if SEND_THE_MESSAGE:
@@ -50,7 +51,7 @@ def send_messages(driver, storedMessage):
 
         index += 1
         driver.back()
-        time.sleep(1.5)
+        time.sleep(random.randint(1, 3))
 
         list_of_friends = driver.find_elements(
             By.XPATH, "//div[@class='listItemContents-2n2Uy9']")
