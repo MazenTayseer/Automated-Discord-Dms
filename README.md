@@ -6,7 +6,7 @@ An Application to send a Discord message to all your friends with one button cli
 - Download the zip file and extract it.
 - Install the requirements file using `pip install -r requirements.txt`.
 - Open the folder and run the `main.py` file.
-- You can also run the `run.bat` file, but you have to modify it so it have `PATH_TO_Python.exe` `PATH_TO_main.py`.
+- You can also run the `run.bat` file, but you have to modify it so it have `PATH_TO_Python.exe`  `"PATH_TO_main.py"`.
 
 ## How to Use
 - When you run it, this screen will appear.
