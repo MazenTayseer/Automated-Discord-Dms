@@ -18,3 +18,11 @@ An Application to send a Discord message to all your friends with one button cli
   Otherwise, run the program again without checking the `Run in background` box, and complete the Captcha or the 2 Factor Authentication
   yourself (You will have 240 seconds), then close the browser and run it again while checking the `Run in background` box.
 - You will have a terminal open, sending a message every time a message was sent, and **DONE** when the program finishes.
+
+## Chrome Version
+Please make sure you have the latest chrome version installed.
+- On your computer, open Chrome.
+- At the top right, click More .
+- Click Help. About Google Chrome.
+- Click Update Google Chrome. Important: If you can't find this button, you're on the latest version.
+- Click Relaunch.
