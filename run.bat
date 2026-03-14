@@ -1,1 +1,0 @@
-D:\Python\PycharmSettings\Scripts\python.exe "D:\Python\Automated Discord Dms\main.py"
